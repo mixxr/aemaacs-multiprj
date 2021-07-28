@@ -338,40 +338,7 @@
                     clientlibsJsHead="my-site-1.dependencies">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>
-                <policy_spa
-                    jcr:primaryType="nt:unstructured"
-                    jcr:title="Site1 SPA Page Policy"
-                    sling:resourceType="wcm/core/components/policy/policy"
-                    clientlibs="[my-site-1.angular]">
-                    <jcr:content jcr:primaryType="nt:unstructured"/>
-                </policy_spa>
             </page>
-            <spa jcr:primaryType="nt:unstructured">
-                <default
-                    jcr:primaryType="nt:unstructured"
-                    jcr:title="Site1 App Policy"
-                    sling:resourceType="wcm/core/components/policy/policy"
-                    clientlibs="[my-site-1.angular]"
-                    isRoot="{Boolean}true"
-                    structureDepth="3"
-                />
-            </spa>
         </components>
     </my-site-1>
-    <wcm jcr:primaryType="nt:unstructured">
-        <foundation jcr:primaryType="nt:unstructured">
-            <components jcr:primaryType="nt:unstructured">
-                <responsivegrid jcr:primaryType="nt:unstructured">
-                    <spa-default
-                        jcr:description="Includes only SPA-Enabled components."
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="SPA Content"
-                        sling:resourceType="wcm/core/components/policy/policy"
-                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/my-site-1/components/text]">
-                        <jcr:content jcr:primaryType="nt:unstructured"/>
-                    </spa-default>
-                    </responsivegrid>
-            </components>
-        </foundation>
-    </wcm>
 </jcr:root>

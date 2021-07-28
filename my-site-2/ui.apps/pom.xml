@@ -111,23 +111,7 @@
             <version>${project.version}</version>
         </dependency>
 
-        <!-- <dependency>
-            <groupId>com.mysite2</groupId>
-            <artifactId>my-site-2.ui.frontend</artifactId>
-            <version>${project.version}</version>
-            <type>zip</type>
-        </dependency> -->
 
-        <!-- SPA Project Core (includes hierarchy page) -->
-        <dependency>
-            <groupId>com.adobe.aem</groupId>
-            <artifactId>spa.project.core.ui.apps</artifactId>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.aem</groupId>
-            <artifactId>spa.project.core.core</artifactId>
-        </dependency>
         <dependency>
             <groupId>com.mysite2</groupId>
             <artifactId>my-site-2.ui.apps.structure</artifactId>

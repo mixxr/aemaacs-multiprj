@@ -77,16 +77,6 @@
                             <type>zip</type>
                             <target>/apps/my-site-1-packages/application/install</target>
                         </embedded>
-                        <embedded>
-                            <groupId>com.adobe.aem</groupId>
-                            <artifactId>spa.project.core.core</artifactId>
-                            <target>/apps/my-site-1-vendor-packages/application/install</target>
-                        </embedded>
-                        <embedded>
-                            <groupId>com.adobe.aem</groupId>
-                            <artifactId>spa.project.core.ui.apps</artifactId>
-                            <target>/apps/my-site-1-vendor-packages/application/install</target>
-                        </embedded>
                     </embeddeds>
                 </configuration>
             </plugin>
@@ -181,10 +171,6 @@
                     </plugin>
                 </plugins>
             </build>
-            <properties>
-                <!-- Use `build:production` instead of `build` NPM script -->
-                <build.environment>:production</build.environment>
-            </properties>
         </profile>
     </profiles>
 
@@ -211,15 +197,5 @@
             <type>zip</type>
         </dependency>
 
-        <!-- SPA Project Core (includes hierarchy page) -->
-        <dependency>
-            <groupId>com.adobe.aem</groupId>
-            <artifactId>spa.project.core.ui.apps</artifactId>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>com.adobe.aem</groupId>
-            <artifactId>spa.project.core.core</artifactId>
-        </dependency>
     </dependencies>
 </project>

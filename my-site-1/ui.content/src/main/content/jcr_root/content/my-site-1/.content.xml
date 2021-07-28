@@ -5,7 +5,7 @@
         cq:allowedTemplates="[/conf/my-site-1/settings/wcm/templates/(?!xf-).*]"
         cq:conf="/conf/my-site-1"
         cq:redirectTarget="/content/my-site-1/us/en"
-        cq:template="/conf/my-site-1/settings/wcm/templates/spa-app-template"
+        cq:template="/conf/my-site-1/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
         jcr:title="Site1"
         sling:configRef="/conf/my-site-1"
