@@ -7,8 +7,13 @@
 
 Include conf.d/rewrites/default_rewrite.rules
 
+# suppose that
+# www.mysite.com => my-site-2
+# www.mysite.com/sub-site => my-site-1
+
+
 # rewrite for root redirect
-RewriteRule ^/?$ /content/${CONTENT_FOLDER_NAME}/us/en.html [PT,L]
+RewriteRule ^/sub-site/?$ /content/${CONTENT_FOLDER_NAME_1}/us/en.html [PT,L]
 
 RewriteCond %{REQUEST_URI} !^/apps
 RewriteCond %{REQUEST_URI} !^/bin
@@ -21,4 +26,20 @@ RewriteCond %{REQUEST_URI} !^/system
 RewriteCond %{REQUEST_URI} !^/tmp
 RewriteCond %{REQUEST_URI} !^/var
 RewriteCond %{REQUEST_URI} (.html|.jpe?g|.png|.svg)$
-RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
+RewriteRule ^/sub-site/(.*)$ /content/${CONTENT_FOLDER_NAME_1}/$1 [PT,L]
+
+# rewrite for root redirect
+RewriteRule ^/?$ /content/${CONTENT_FOLDER_NAME_2}/us/en.html [PT,L]
+
+RewriteCond %{REQUEST_URI} !^/apps
+RewriteCond %{REQUEST_URI} !^/bin
+RewriteCond %{REQUEST_URI} !^/content
+RewriteCond %{REQUEST_URI} !^/etc
+RewriteCond %{REQUEST_URI} !^/home
+RewriteCond %{REQUEST_URI} !^/libs
+RewriteCond %{REQUEST_URI} !^/saml_login
+RewriteCond %{REQUEST_URI} !^/system
+RewriteCond %{REQUEST_URI} !^/tmp
+RewriteCond %{REQUEST_URI} !^/var
+RewriteCond %{REQUEST_URI} (.html|.jpe?g|.png|.svg)$
+RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME_2}/$1 [PT,L]
