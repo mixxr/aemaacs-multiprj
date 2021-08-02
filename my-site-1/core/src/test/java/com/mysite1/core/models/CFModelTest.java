@@ -22,6 +22,8 @@ import com.adobe.cq.dam.cfm.FragmentTemplate;
 import com.day.cq.wcm.api.*;
 import org.junit.jupiter.api.BeforeEach;
 
+import io.wcm.testing.mock.aem.dam.*;
+
 @ExtendWith(AemContextExtension.class)
 class CFModelTest {
 
@@ -33,6 +35,7 @@ class CFModelTest {
 	void setUp() throws Exception {
 		//tagServlet = context.registerService(new TagServlet()); // com.adobe.training.core.servlets.TagServlet;
         System.out.println("CFModelTest.setUp()");
+        registerInjectActivateService(new MockAemDamAdapterFactory());
 
         context.load().json("/cfmodels.json", "/conf/wknd");
         //context.load().json("/cf.json", "/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp");
