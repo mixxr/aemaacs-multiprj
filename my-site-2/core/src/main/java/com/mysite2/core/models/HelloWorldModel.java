@@ -34,7 +34,7 @@ import com.day.cq.wcm.api.PageManager;
 import java.util.Optional;
 
 @Model(adaptables = Resource.class)
-public class HelloWorldModel {
+public class HelloWorldModel{
 
     @ValueMapValue(name=PROPERTY_RESOURCE_TYPE, injectionStrategy=InjectionStrategy.OPTIONAL)
     @Default(values="No resourceType")

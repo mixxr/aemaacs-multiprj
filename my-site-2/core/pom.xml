@@ -91,6 +91,12 @@ Import-Package: javax.annotation;version=0.0.0,*
             <artifactId>aem-sdk-api</artifactId>
         </dependency>
 
+                    <dependency>
+                <groupId>com.mysite1</groupId>
+                <artifactId>my-site-1.core</artifactId>
+                
+            </dependency>
+
 
         <!-- Testing -->
         <dependency>

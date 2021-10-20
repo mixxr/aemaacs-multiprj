@@ -50,8 +50,8 @@
         <bnd.version>5.1.2</bnd.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <aem.sdk.api>2021.7.5662.20210726T181801Z-210600</aem.sdk.api>
-        <aemanalyser.version>1.0.10</aemanalyser.version>
+        <aem.sdk.api>2021.10.5940.20211013T233531Z-210900</aem.sdk.api>
+        <aemanalyser.version>1.1.10</aemanalyser.version>
         <componentGroupName>Site1</componentGroupName>
     </properties>
 
