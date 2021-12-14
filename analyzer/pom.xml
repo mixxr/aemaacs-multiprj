@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ |  Copyright 2015 Adobe Systems Incorporated
+ |
+ |  Licensed under the Apache License, Version 2.0 (the "License");
+ |  you may not use this file except in compliance with the License.
+ |  You may obtain a copy of the License at
+ |
+ |      http://www.apache.org/licenses/LICENSE-2.0
+ |
+ |  Unless required by applicable law or agreed to in writing, software
+ |  distributed under the License is distributed on an "AS IS" BASIS,
+ |  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ |  See the License for the specific language governing permissions and
+ |  limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.mysite</groupId>
+        <artifactId>my-site</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+
+    <groupId>com.analyzer</groupId>
+    <artifactId>analyzer</artifactId>
+    <packaging>aem-analyse</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>Analayzer</name>
+    <description>Analayzer</description>
+
+
+
+    <properties>
+        <aemanalyser.version>1.2.2</aemanalyser.version>
+    </properties>
+
+<build>
+        <plugins>
+
+                            <!-- AEM Analyser Plugin -->
+                <plugin>
+                    <groupId>com.adobe.aem</groupId>
+                    <artifactId>aemanalyser-maven-plugin</artifactId>
+                    <version>${aemanalyser.version}</version>
+                    <extensions>true</extensions>
+                </plugin>
+        </plugins>
+    </build>
+
+    
+
+   <dependencies> <!-- Add all application content packages -->
+        <dependency>
+            <groupId>com.mysite1</groupId>
+                <artifactId>my-site-1.all</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.mysite2</groupId>
+                <artifactId>my-site-2.all</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <type>zip</type>
+        </dependency>
+    </dependencies>
+
+</project>
